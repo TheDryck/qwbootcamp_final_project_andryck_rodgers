@@ -9,7 +9,7 @@ describe('Authentication', ()=>{
         cy.get('#signInOrRegister').click();
     })
 
-    it.skip('New user signup with valid email and password', ()=>{
+    it('New user signup with valid email and password', ()=>{
         /* const fullName = faker.name.fullName();
         const firstName = fullName.split(" ")[0];
         const lastName = fullName.split(" ")[1]; */
@@ -18,7 +18,7 @@ describe('Authentication', ()=>{
         //const password = faker.internet.password();
 
         cy.origin('https://dev-mlluudmotpwoldtv.us.auth0.com', {args: {}}, ({}) => {
-            const email = 'example66@gmail.com' //faker.internet.email();
+            const email = 'example' + (Math.random() * 100) + '@gmail.com' //faker.internet.email();
             const password = 'Dryck$t3r'
 
             cy.get('ul.auth0-lock-tabs > li > a').click();
@@ -35,7 +35,7 @@ describe('Authentication', ()=>{
         
     })
 
-    it.skip('User signup with used email', ()=>{
+    it('User signup with used email', ()=>{
         cy.origin('https://dev-mlluudmotpwoldtv.us.auth0.com', {args: {}}, ({}) => {
             const email = 'eexample35@gmail.com' //faker.internet.email();
             const password = 'Dryck$t3r'
@@ -54,7 +54,7 @@ describe('Authentication', ()=>{
         //cy.get('div.auth0-global-message').should('exist');
     })
 
-    it.skip('User signup with blank input fields', ()=>{
+    it('User signup with blank input fields', ()=>{
         cy.origin('https://dev-mlluudmotpwoldtv.us.auth0.com', {args: {}}, ({}) => {
 
             cy.get('ul.auth0-lock-tabs > li > a').click();
