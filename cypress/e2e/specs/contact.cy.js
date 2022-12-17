@@ -27,7 +27,6 @@ describe('Validating contact page', ()=>{
                 cy.get('div.chakra-form__error-message.css-170ki1a').should('have.text', 'Email is invalid')
             }
             if(d.user === 'no_email'){
-                cy.wait(2000)
                 cy.get('div.chakra-form__error-message.css-170ki1a').should('be.visible');
                 cy.get('div.chakra-form__error-message.css-170ki1a').should('have.text', 'Field is required!')
             }if(d.user === 'valid'){
