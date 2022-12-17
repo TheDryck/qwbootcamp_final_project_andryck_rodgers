@@ -13,5 +13,7 @@
     "@faker-js/faker": "^7.6.0",
     "cypress": "^12.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "cypress-iframe": "^1.0.1"
+  }
 }
