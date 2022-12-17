@@ -16,6 +16,14 @@ class Product{
         return ('#category')
     }
 
+    get selectFavourite(){
+        return('#add-to-favorite')
+    }
+
+    get removeFavourite(){
+        return ('#remove-from-favorite')
+    }
+
     selectSort(sort){
         cy.get(this.selectSortOption).select(sort)
     }
