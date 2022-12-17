@@ -5,7 +5,14 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    reporter: 'mochawesome',
+    reporterOptions: {
+      reportDir: 'cypress/reports',
+      overwrite: false,
+      html: false,
+      json: true
+    },
+    chromeWebSecurity: false,
+    defaultCommandTimeout: 10000,
   },
-  chromeWebSecurity: false,
-  defaultCommandTimeout: 10000
 });
