@@ -8,11 +8,21 @@ class Product{
         return ('p.chakra-text.css-0')
     }
 
-    get selectSort(){
+    get selectSortOption(){
         return ('#sort')
     }
 
+    get selectCategoryOption(){
+        return ('#category')
+    }
+
     selectSort(sort){
-        cy.get(this.selectSort).select(sort)
+        cy.get(this.selectSortOption).select(sort)
+    }
+
+    selectCategory(category){
+        cy.get(this.selectCategoryOption).select(category)
     }
 }
+
+export default new Product()
