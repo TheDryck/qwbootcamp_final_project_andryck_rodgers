@@ -5,7 +5,7 @@ class Product{
     }
 
     get itemPrice(){
-        return ('p.chakra-text.css-0')
+        return ('div.chakra-stack.css-1ieohnc > p.chakra-text.css-0')
     }
 
     get selectSortOption(){
